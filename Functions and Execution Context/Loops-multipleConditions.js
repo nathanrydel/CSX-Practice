@@ -1,3 +1,5 @@
+// Using a loop, write a function getTheRange which finds the range (difference between high and low) of arr. The value returned should be an array with the low, high, and range.
+
 function addingAllTheWeirdStuff(array1, array2) {
   // declare evenSum variable
   // declare oddSum variable
