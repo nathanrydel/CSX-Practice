@@ -1,13 +1,13 @@
 const x = 3;
 
-function isX1(num) {
+const isX1 = (num) => {
   const x = 5;
   return num === x;
-}
+};
 
-function isX2(num) {
+const isX2 = (num) => {
   return num === x;
-}
+};
 
 const one = isX1(/* ADD CODE HERE */ 5);
 const two = isX2(/* ADD CODE HERE */ 3);
