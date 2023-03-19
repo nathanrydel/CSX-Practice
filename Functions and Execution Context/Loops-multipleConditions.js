@@ -1,6 +1,6 @@
 // Using a loop, write a function getTheRange which finds the range (difference between high and low) of arr. The value returned should be an array with the low, high, and range.
 
-function addingAllTheWeirdStuff(array1, array2) {
+const addingAllTheWeirdStuff = (array1, array2) => {
   // declare evenSum variable
   // declare oddSum variable
   let evenSum = 0;
@@ -38,7 +38,7 @@ function addingAllTheWeirdStuff(array1, array2) {
   }
   // return array1
   return array1;
-}
+};
 
 // Uncomment these to check your work!
 console.log(addingAllTheWeirdStuff([1, 3, 5, 17, 15], [1, 2, 3, 4, 5])); // expected log [10, 12, 14, 23, 21]
