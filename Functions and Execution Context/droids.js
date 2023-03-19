@@ -1,4 +1,4 @@
-function droids(arr) {
+const droids = (arr) => {
   let result = '';
   // ADD CODE HERE
   for (let i = 0; i < arr.length; i++) {
@@ -11,7 +11,7 @@ function droids(arr) {
   }
 
   return result;
-}
+};
 
 // Uncomment these to check your work!
 const starWars = ['Luke', 'Finn', 'Rey', 'Kylo', 'Droids'];
