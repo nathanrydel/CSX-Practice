@@ -1,6 +1,6 @@
 // ADD CODE HERE
 // create a function that accepts a num
-let iLoveEvenNumbers = (num) => {
+const iLoveEvenNumbers = (num) => {
   // check if even
   if (num % 2 === 0) {
     // if so, return "Oh Yeah Evens!"
