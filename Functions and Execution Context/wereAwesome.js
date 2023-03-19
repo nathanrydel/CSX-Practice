@@ -1,7 +1,7 @@
-function wereAwesome(you, yourBuddy) {
+const wereAwesome = (you, yourBuddy) => {
   // ADD CODE HERE
   return `${yourBuddy} and ${you} are awesome!`;
-}
+};
 
 // Uncomment the lines below to test your function:
 console.log(wereAwesome('Dave', 'Will')); // => "Will and Dave are awesome!"
