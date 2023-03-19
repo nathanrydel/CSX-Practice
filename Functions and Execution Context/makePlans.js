@@ -1,12 +1,12 @@
 let friendsAvailable = true;
 
-function makePlans(name) {
+const makePlans = (name) => {
   // INSERT CODE HERE
   // return invoc of callFriend and pass friendsAvailable and name
   return callFriend(friendsAvailable, name);
-}
+};
 
-function callFriend(bool, name) {
+const callFriend = (bool, name) => {
   // INSERT CODE HERE
   // assign bool from friendsAvailable
   if (bool) {
@@ -16,7 +16,7 @@ function callFriend(bool, name) {
   } else {
     return 'Everyone is busy this weekend';
   }
-}
+};
 
 // Uncomment these to check your work!
 console.log(makePlans('Mary')); // should return: "Plans made with Mary this weekend'
