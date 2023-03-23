@@ -3,8 +3,9 @@
 // create the function called addWaldo
 // must take an obj (waldoObj)
 const addWaldo = (waldoObj) => {
-  // assign
+  // assign waldoObj
   waldoObj['Waldo'] = 'unknown';
+  // return waldoObj
   return waldoObj;
 };
 
