@@ -15,7 +15,7 @@ const imAboutToExplodeWithExcitement = (n) => {
     }
     n--;
   }
-  console.log('That was kind of a let down');
+  console.log("That was kind of a let down");
 };
 
 // Uncomment the line below to check your work!
