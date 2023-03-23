@@ -1,5 +1,4 @@
-// Using a loop, write a function getTheRange which finds the range (difference between high and low) of arr. The value returned should be an array with the low, high, and range.
-
+// Using a loop, write a function getTheRange which finds the range (difference between high and low) of arr. The value returned should be an array with the low, high, and range
 const getTheRange = (arr) => {
   // initialize the lowest number as the first element of arr
   let low = arr[0];
@@ -23,4 +22,5 @@ const getTheRange = (arr) => {
 };
 
 // Simple Test
-console.log(getTheRange([3, 2, 5, 4, 7, 9, 10])); // expect log [2, 10, 8]
+// expect log [2, 10, 8]
+console.log(getTheRange([3, 2, 5, 4, 7, 9, 10]));
