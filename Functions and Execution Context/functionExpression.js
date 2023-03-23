@@ -5,6 +5,4 @@ function functionDeclaration() {
   return "Hi there!";
 }
 
-const myFunc = () => "Hi there!";
-
 // console.log(myFunc()) //should log: "Hi there!"
