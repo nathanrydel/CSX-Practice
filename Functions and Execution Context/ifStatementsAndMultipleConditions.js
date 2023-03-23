@@ -3,13 +3,13 @@ const greetings = (hour) => {
   // check the hour to determine greeting
   // if less than 12, return "Good Morning!"
   if (hour <= 11) {
-    return 'Good Morning!';
+    return "Good Morning!";
     // else if greater than less than 15, return "Good Afternoon!"
   } else if (hour >= 12 && hour < 15) {
-    return 'Good Afternoon!';
+    return "Good Afternoon!";
     // else return "Good Night!"
   } else {
-    return 'Good Night!';
+    return "Good Night!";
   }
 };
 

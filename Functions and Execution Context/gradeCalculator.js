@@ -2,19 +2,19 @@ const gradeCalculator = (grade) => {
   // ADD CODE HERE
   // check if grade is greater than or equal to 90 and return "A"
   if (grade >= 90) {
-    return 'A';
+    return "A";
     // else if grade is greater than or equal to 80 and less than 90, return "B"
   } else if (grade >= 80 && grade < 90) {
-    return 'B';
+    return "B";
     // else if grade is greater than or equal to 70 and less than 80, return "C"
   } else if (grade >= 70 && grade < 80) {
-    return 'C';
+    return "C";
     // else if grade is greater than or equal to 60 and less than 70, return "D"
   } else if (grade >= 60 && grade < 70) {
-    return 'D';
+    return "D";
     // else return "F"
   } else {
-    return 'F';
+    return "F";
   }
 };
 
