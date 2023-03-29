@@ -15,9 +15,40 @@ In the example above, the accumulator begins at 0. add(0,4) is called. The accum
 
 Construct your own reduce function that accepts an array, a callback, and an initial value and returns a single value. */
 
-// ADD CODE HERE
+// input: array, callback, initial value;
+// output: single value
+
+// declare reduce with 3 args array, callback, initial value;
+const reduce = (array, callback, initialValue) => {
+  // check to see if 1st arg is array
+  if (Array.isArray(array)) {
+    // initialize the accumulator value
+    let accumulator;
+    // check if 3rd arg is defined
+    if (initialValue === undefined) {
+      // if undefined, set accumulator to first array element
+      accumulator = array[0];
+      // remove first element to avoid duplicating element
+      array = array.slice(1);
+    } else {
+      // if defined, set accumulator to initialValue
+      accumulator = initialValue;
+    }
+    // iterate over array
+    array.forEach((element) => {
+      // set acc to be result of calling callback with args of accumulator, current array element
+      accumulator = callback(accumulator, element);
+    });
+    // return accumulator
+    return accumulator;
+  }
+  // error handling catch if 1st arg is not array
+  return 'The first argument should be an array';
+};
 
 // Uncomment these to check your work!
-// const nums = [4, 1, 3];
-// const add = function(a, b) { return a + b; }
-// console.log(reduce(nums, add, 0)); // should log 8
+const nums = [4, 1, 3];
+const add = function (a, b) {
+  return a + b;
+};
+console.log(reduce(nums, add, 0)); // should log 8
