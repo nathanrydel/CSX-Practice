@@ -8,11 +8,11 @@ const pluralize = (array) => {
   let output = [];
   // loop thru array and add an s to the indiviual elements
   for (let i = 0; i < array.length; i++) {
-    output.push(array[i] + "s");
+    output.push(array[i] + 's');
   }
   return output;
 };
 
 // Uncomment these to check your work!
-const animals = ["dog", "cat", "tree frog"];
+const animals = ['dog', 'cat', 'tree frog'];
 console.log(pluralize(animals)); // should log: ["dogs", "cats", "tree frogs"]
