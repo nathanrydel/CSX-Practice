@@ -8,12 +8,12 @@ const countBy = (array, callback) => {
   for (let i = 0; i < array.length; i++) {
     // declare key and set to callback at element of array
     const key = callback(array[i]);
-    // check if key true
+    // check if key exists in countedArrayToObj
     if (countedArrayToObj[key]) {
       // increment key
       countedArrayToObj[key]++;
     } else {
-      // set key to 1 if false
+      // if does not exist, create new key and set to 1;
       countedArrayToObj[key] = 1;
     }
   }
