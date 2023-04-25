@@ -3,6 +3,7 @@
 // ADD CODE HERE
 
 const countBy = (array, callback) => {
+  // create empty obj to store result
   const countedArrayToObj = {};
   // iterate thru array
   for (let i = 0; i < array.length; i++) {
@@ -20,6 +21,18 @@ const countBy = (array, callback) => {
   return countedArrayToObj;
 };
 
+const refactoredCountBy = (arr, callback) => {
+  // use .reduce() method to iterate thru the array and update the counts obj
+  return arr.reduce((counts, current) => {
+    // apply callback to current element to get the result
+    const result = callback(current);
+    // update the counts obj by incrementing the count associated with the results key
+    counts[result] = (counts[result] || 0) + 1;
+    // return the updated counts object to be used as the accumulator in the next iteration
+    return counts;
+  }, {});
+};
+
 // Uncomment these to check your work!
 function evenOdd(n) {
   if (n % 2 === 0) return 'even';
@@ -27,3 +40,4 @@ function evenOdd(n) {
 }
 const nums = [1, 2, 3, 4, 5];
 console.log(countBy(nums, evenOdd)); // should log: { odd: 3, even: 2 }
+console.log(refactoredCountBy(nums, evenOdd)); // should log: { odd: 3, even: 2 }
