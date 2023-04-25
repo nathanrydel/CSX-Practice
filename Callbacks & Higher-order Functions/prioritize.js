@@ -2,7 +2,32 @@
 
 // ADD CODE HERE
 
+// input: arr, callback
+// output: arr with truthy results first, falsy results second
+
+const prioritize = (arr, callback) => {
+  // declare empty truthy result array
+  const truthyArr = [];
+  // declare empty falsy result array
+  const falsyArr = [];
+  // iterate thru each element of arr
+  // perform callback on each element
+  arr.forEach((element) => {
+    // if callback result is truthy, add to truthy array
+    if (callback(element)) {
+      truthyArr.push(element);
+    } else {
+      // if result is false, add to falsy array
+      falsyArr.push(element);
+    }
+  });
+  // return combination of truthy array and falsy array with truthy first
+  return [...truthyArr, ...falsyArr];
+};
+
 // Uncomment these to check your work!
-// function startsWithS(str) { return str[0].toLowerCase() === 's'; }
-// const tvShows = ['curb', 'rickandmorty', 'seinfeld', 'sunny', 'friends']
-// console.log(prioritize(tvShows, startsWithS)); // should log: ['seinfeld', 'sunny', 'curb', 'rickandmorty', 'friends']
+function startsWithS(str) {
+  return str[0].toLowerCase() === 's';
+}
+const tvShows = ['curb', 'rickandmorty', 'seinfeld', 'sunny', 'friends'];
+console.log(prioritize(tvShows, startsWithS)); // should log: ['seinfeld', 'sunny', 'curb', 'rickandmorty', 'friends']
