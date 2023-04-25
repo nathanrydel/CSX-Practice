@@ -2,7 +2,34 @@
 
 // ADD CODE HERE
 
+// input: object, callback
+// output: array of truthy callbacks
+
+// create function expression goodKeys with object and callback params
+const goodKeys = (obj, callback) => {
+  // declare truthy result array
+  const truthyArr = [];
+  // iterate thru obj  using Object.keys()
+  for (const key of Object.keys(obj)) {
+    // and apply callback to value of obj to check truthyness
+    if (callback(obj[key])) {
+      // if yes, push to truthyArr
+      truthyArr.push(key);
+    }
+  }
+  // return truthyArr
+  return truthyArr;
+};
+
 // Uncomment these to check your work!
-// const sunny = { mac: 'priest', dennis: 'calculator', charlie: 'birdlaw', dee: 'bird', frank: 'warthog' };
-// function startsWithBird(str) { return str.slice(0, 4).toLowerCase() === 'bird'; };
-// console.log(goodKeys(sunny, startsWithBird)); // should log: ['charlie', 'dee']
+const sunny = {
+  mac: 'priest',
+  dennis: 'calculator',
+  charlie: 'birdlaw',
+  dee: 'bird',
+  frank: 'warthog',
+};
+function startsWithBird(str) {
+  return str.slice(0, 4).toLowerCase() === 'bird';
+}
+console.log(goodKeys(sunny, startsWithBird)); // should log: ['charlie', 'dee']
