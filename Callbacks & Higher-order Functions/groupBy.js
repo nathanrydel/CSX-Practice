@@ -2,21 +2,24 @@
 
 // ADD CODE HERE
 // input: array, callback
-// output: array
+// output: object
 
-const groupBy = (array, callback) => {
-  const groupedObj = {};
-  // iterate thru array
-  for (let i = 0; i < array.length; i++) {
-    // return value from callback and save as a key
-    const key = callback(array[i]);
-    // value of key associated is an array
-    if (!groupedObj[key]) {
-      groupedObj[key] = [];
+const groupBy = (arr, callback) => {
+  // Create an empty object to store the grouped elements
+  const grouped = {};
+  // Iterate over the array using the forEach method
+  arr.forEach((element) => {
+    // Call the callback function on the current element
+    const key = callback(element);
+    // If the key doesn't exist in the grouped object yet, create a new array for it
+    if (!grouped[key]) {
+      grouped[key] = [];
     }
-    groupedObj[key].push(array[i]);
-  }
-  return groupedObj;
+    // Add the current element to the array associated with the key
+    grouped[key].push(element);
+  });
+  // Return the final grouped object
+  return grouped;
 };
 
 // Uncomment these to check your work!
