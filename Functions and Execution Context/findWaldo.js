@@ -4,14 +4,14 @@ const findWaldo = (obj) => {
   // iterate through obj
   for (let key in obj) {
     // check if key is "Waldo"
-    if (key === "Waldo") {
+    if (key === 'Waldo') {
       return obj[key];
     }
   }
   return "Where's Waldo?";
 };
 
-const DC = { Bruce: "Wayne", Harley: "Quinn" };
-const supernatural = { Sam: "Winchester", Dean: "Winchester", Waldo: "unknown" };
+const DC = { Bruce: 'Wayne', Harley: 'Quinn' };
+const supernatural = { Sam: 'Winchester', Dean: 'Winchester', Waldo: 'unknown' };
 console.log(findWaldo(DC)); // should log: 'Where's Waldo?'
 console.log(findWaldo(supernatural)); // should log: 'unknown'

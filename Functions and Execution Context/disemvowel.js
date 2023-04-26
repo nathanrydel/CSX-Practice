@@ -1,6 +1,6 @@
 const disemvowel = (str) => {
   // delcare a result var to store output
-  let rslt = "";
+  let rslt = '';
   // iterate thru str with FOR loop
   for (let i = 0; i < str.length; i++) {
     // assign str at element to variable char
@@ -10,11 +10,11 @@ const disemvowel = (str) => {
     // needs to check both upper and lowercase
     // using the .toLowerCase() method
     if (
-      char.toLowerCase() !== "a" &&
-      char.toLowerCase() !== "e" &&
-      char.toLowerCase() !== "i" &&
-      char.toLowerCase() !== "o" &&
-      char.toLowerCase() !== "u"
+      char.toLowerCase() !== 'a' &&
+      char.toLowerCase() !== 'e' &&
+      char.toLowerCase() !== 'i' &&
+      char.toLowerCase() !== 'o' &&
+      char.toLowerCase() !== 'u'
     ) {
       // add characters that are not vowels to rslt
       rslt += char;
@@ -25,6 +25,6 @@ const disemvowel = (str) => {
 };
 
 // Uncomment these to check your work!
-console.log(disemvowel("CodeSmith")); // => 'CdSmth'
-console.log(disemvowel("BANANA")); // => 'BNN'
-console.log(disemvowel("hello world")); // => 'hll wrld'
+console.log(disemvowel('CodeSmith')); // => 'CdSmth'
+console.log(disemvowel('BANANA')); // => 'BNN'
+console.log(disemvowel('hello world')); // => 'hll wrld'

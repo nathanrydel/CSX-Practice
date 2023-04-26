@@ -4,8 +4,6 @@
 //   return `Hi, my name is ${name} and I'm a ${profession}.`
 // }
 
-const myJob = (name, profession) => {
-  return `Hi, my name is ${name} and I'm a ${profession}.`;
-};
+const myJob = (name, profession) => `Hi, my name is ${name} and I'm a ${profession}.`;
 
-console.log(myJob("Jon", "Knight's Watchman"));
+console.log(myJob('Jon', "Knight's Watchman"));

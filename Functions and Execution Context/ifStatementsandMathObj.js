@@ -9,9 +9,9 @@ const closestToTheMark = (player1, player2) => {
   // use the Math Absolute method to check if player1 - theMark is less than player2 - theMark
   if (Math.abs(player1 - theMark) < Math.abs(player2 - theMark)) {
     // return player1 is closer
-    return "Player 1 is closer";
+    return 'Player 1 is closer';
   } else {
-    return "Player 2 is closer";
+    return 'Player 2 is closer';
   }
 };
 

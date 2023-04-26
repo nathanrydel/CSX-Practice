@@ -1,21 +1,25 @@
-const imAboutToExplodeWithExcitement = (n) => {
+const imAboutToExplodeWithExcitement = (countdownLength) => {
   // ADD CODE HERE
   // use a while loop to count backwards from n
-  while (n > 0) {
-    // if n is 5 print "Oh wow, I can't handle the anticipation!"
-    if (n === 5) {
-      console.log("Oh wow, I can't handle the anticipation");
-      // if n is 3 print "I'm about to explode with excitement!"
-    } else if (n === 3) {
+  while (countdownLength >= 0) {
+    // check if n strictly equals 5
+    if (countdownLength === 5) {
+      // print required string to console
+      console.log("Oh wow, I can't handle the anticipation!");
+      // check if n strictly equals 3
+    } else if (countdownLength === 3) {
+      // print required string to console
       console.log("I'm about to explode with excitement!");
-      // print n
+      // check if countdown finished
+    } else if (countdownLength === 0) {
+      // print required string to console
+      console.log('That was kind of a let down');
+      // print n to console as base case
     } else {
-      console.log(n);
-      // decrement n
+      console.log(countdownLength);
     }
-    n--;
+    countdownLength--;
   }
-  console.log("That was kind of a let down");
 };
 
 // Uncomment the line below to check your work!

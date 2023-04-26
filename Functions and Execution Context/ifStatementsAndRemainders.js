@@ -4,10 +4,10 @@ const iLoveEvenNumbers = (num) => {
   // check if even
   if (num % 2 === 0) {
     // if so, return "Oh Yeah Evens!"
-    return "Oh Yeah Evens!";
+    return 'Oh Yeah Evens!';
     // else return "I am too normal for odd numbers"
   } else {
-    return "I am too normal for odd numbers";
+    return 'I am too normal for odd numbers';
   }
 };
 // Uncomment these to check your work!
