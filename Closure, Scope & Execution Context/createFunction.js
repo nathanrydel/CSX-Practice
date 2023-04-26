@@ -7,6 +7,15 @@
 
 // ADD CODE HERE
 
+// create function createFunction
+const createFunction = () => {
+  // create newFunction
+  // return 'hello world'
+  const newFunction = () => 'hello world';
+  // return new function
+  return newFunction;
+};
+
 // Uncomment these to check your work!
-// const myFunction = createFunction();
-// console.log(myFunction()); //should log: 'hello world'
+const myFunction = createFunction();
+console.log(myFunction()); //should log: 'hello world'
