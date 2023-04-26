@@ -12,7 +12,7 @@ const createFunction = () => {
   // create newFunction
   // return 'hello world'
   const newFunction = () => 'hello world';
-  // return new function
+  // return new function definition
   return newFunction;
 };
 
