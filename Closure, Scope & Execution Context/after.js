@@ -11,7 +11,7 @@ function after(numberThreshold, callback) {
   return function (...args) {
     // increment runCounter on every run
     runCounter++;
-    // check if number of times run is equal to numberThreshold
+    // check if number of times run is equal to or greater than numberThreshold
     if (runCounter >= numberThreshold) {
       // if truthy, return callback on invocation
       return callback.apply(this, args);
