@@ -4,18 +4,18 @@
 // output: object
 
 // ADD CODE HERE
-const multiMap = (arr, callbacks) => {
+const multiMap = (values, callbacks) => {
   // declare an empty result obj
   const resultObj = {};
   // iterate thru the elements of arr using .forEach()
-  arr.forEach((element) => {
+  values.forEach((value) => {
     // declare an empty array to store output of callbacks
     const outputArr = [];
-    // iterate thru each callback in the callbacks arr using .forEach()
-    // apply the callback to element off arr and push to output array
-    callbacks.forEach((callback) => outputArr.push(callback(element)));
-    // add to result obj with the element of arr as the key and the element of output array as the value
-    resultObj[element] = outputArr;
+    // iterate thru each callback in the callbacks array using .forEach()
+    // apply the callback to element of arr (value) and push to output array
+    callbacks.forEach((callback) => outputArr.push(callback(value)));
+    // add to result obj with the value as the key and the element of output array as the value
+    resultObj[value] = outputArr;
   });
   // return the result obj
   return resultObj;
