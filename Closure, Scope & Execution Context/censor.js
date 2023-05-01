@@ -2,8 +2,33 @@
 
 // ADD CODE HERE
 
+// input:
+// output:
+
+// declare function, censor, that accepts no arguments
+function censor() {
+  // create a variable, cachedPairs: object, and set as an empty object
+  const cachedPairs = {};
+  // return a function that accepts either two strings: string or one string: string
+  return function (str1, str2) {
+    // check if str2 exists
+    if (str2) {
+      // if two strings, store as a key value pair in cachedPairs
+      cachedPairs[str1] = str2;
+      // return out of loop
+      return;
+    }
+    // if one string, modify the string with the key replaced with the value of the pair
+    Object.keys(cachedPairs).forEach((key) => {
+      str1 = str1.replaceAll(key, cachedPairs[key]);
+    });
+    // return the string
+    return str1;
+  };
+}
+
 // Uncomment these to check your work!
-// const changeScene = censor();
-// changeScene('dogs', 'cats');
-// changeScene('quick', 'slow');
-// console.log(changeScene('The quick, brown fox jumps over the lazy dogs.')); // should log: 'The slow, brown fox jumps over the lazy cats.'
+const changeScene = censor();
+changeScene('dogs', 'cats');
+changeScene('quick', 'slow');
+console.log(changeScene('The quick, brown fox jumps over the lazy dogs.')); // should log: 'The slow, brown fox jumps over the lazy cats.'
