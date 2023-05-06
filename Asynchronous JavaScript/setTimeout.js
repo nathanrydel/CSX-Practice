@@ -8,3 +8,12 @@
 // Make sure the 'console' and 'output' panes are showing (click the tabs above if not) and then run your code with the 'run' button.
 
 // Clear the console. Change the delay time in the time from 600 ms to 0. Think hard about how the order should change and then run the code again
+
+console.log('I am the beginning of the code');
+
+// setTime(callback fn, interval in ms)
+setTimeout(() => console.log('I am in setTimeout callback function'), 600);
+
+console.log('I am at the end of the code.');
+
+setTimeout(() => console.log('I am also in a setTimeout function but the interval is set to 0'), 0);
