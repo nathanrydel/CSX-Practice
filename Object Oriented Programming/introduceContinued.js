@@ -16,6 +16,11 @@ function personFromConstructor(name, age) {
 const mike = personFromConstructor('Mike', 30);
 
 // add code here
+// declare method on PersonConstructor prototype
+// return desired string accounting for any instance name
+PersonConstructor.prototype.introduce = function () {
+  console.log(`Hi, my name is ${this.name}`);
+};
 
 // Uncomment this line to check your work!
-// mike.introduce(); // -> Logs 'Hi, my name is Mike'
+mike.introduce(); // -> Logs 'Hi, my name is Mike'
