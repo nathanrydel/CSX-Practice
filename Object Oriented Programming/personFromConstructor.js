@@ -8,6 +8,14 @@ function PersonConstructor() {
 
 function personFromConstructor(name, age) {
   // add code here
+  // declare variable person and set to new instance of PersonConstructor
+  const person = new PersonConstructor();
+  // set name property
+  person.name = name;
+  // set age property
+  person.age = age;
+  // return person
+  return person;
 }
 
 const mike = personFromConstructor('Mike', 30);
