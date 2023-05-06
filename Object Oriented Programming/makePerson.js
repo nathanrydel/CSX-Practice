@@ -6,6 +6,10 @@
 
 function makePerson(name, age) {
   // add code here
+  const person = {};
+  person.name = name;
+  person.age = age;
+  return person;
 }
 
 const vicky = makePerson('Vicky', 24);
