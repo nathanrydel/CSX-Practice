@@ -2,6 +2,11 @@
 
 const personStore = {
   // add code here
+  // declare greet method
+  greet() {
+    // console log desired string
+    console.log('hello');
+  },
 };
 
 // Uncomment this line to check your work!
